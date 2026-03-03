@@ -9,7 +9,8 @@
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/11820/11820511.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/style.css?v=20260303b">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="static/style.css?v=20260303c">
 </head>
 
 <body>
@@ -36,7 +37,9 @@
       <div class="hero-text">
         <h1>Zhoufutu Wen <span style="font-weight:400; font-size:0.6em; color:#6b7280;">温周伏土</span></h1>
         <p class="subtitle">Algorithm Researcher @ ByteDance SEED · Foundation-Evaluation</p>
-        <p class="quote">"As LLMs' capability boundaries continue to expand while compute and human resources remain limited, the core challenge of evaluation is determining <em>where</em> to invest resources and <em>how</em> to efficiently support model iteration once a direction is chosen."</p>
+        <div class="quote maxwell">
+          $$\nabla \cdot \mathbf{E}=\frac{\rho}{\varepsilon_0} \qquad \nabla \cdot \mathbf{B}=0 \qquad \nabla \times \mathbf{E}=-\frac{\partial \mathbf{B}}{\partial t} \qquad \nabla \times \mathbf{B}=\mu_0 \mathbf{J}+\mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}$$
+        </div>
       </div>
       <img src="data/profile.jpg" alt="Zhoufutu Wen" class="profile-img">
     </div>
@@ -542,6 +545,11 @@
   <div class="footer">
     &copy; 2026 Zhoufutu Wen. Powered by GitHub Pages.
   </div>
+
+  <!-- KaTeX -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}]});"></script>
 
   <!-- Scripts -->
   <script>

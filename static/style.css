@@ -168,6 +168,16 @@ a:hover {
   border-left: 3px solid var(--accent);
 }
 
+.hero-text .quote.maxwell {
+  font-style: normal;
+  font-family: inherit;
+  padding: 4px 0 4px 14px;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.hero-text .quote.maxwell .katex { font-size: 0.85em; }
+
 .profile-img {
   width: 160px;
   height: 160px;

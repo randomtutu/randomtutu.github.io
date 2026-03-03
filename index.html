@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zhoufutu Wen | ByteDance SEED</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zhoufutu Wen's academic homepage - Algorithm Researcher at ByteDance SEED, focusing on LLM Evaluation">
+  <meta name="keywords" content="Zhoufutu Wen, 温周伏土, ByteDance, SEED, LLM Evaluation, Benchmarking">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/11820/11820511.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="brand">Zhoufutu Wen</div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#biography" onclick="closeMenu()">Biography</a></li>
+        <li><a href="#news" onclick="closeMenu()">News</a></li>
+        <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
+        <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+        <li><a href="#education" onclick="closeMenu()">Education</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Zhoufutu Wen <span style="font-weight:400; font-size:0.6em; color:#6b7280;">温周伏土</span></h1>
+        <p class="subtitle">Algorithm Researcher @ ByteDance SEED · Foundation-Evaluation</p>
+        <p class="quote">"As LLMs' capability boundaries continue to expand while compute and human resources remain limited, the core challenge of evaluation is determining <em>where</em> to invest resources and <em>how</em> to efficiently support model iteration once a direction is chosen."</p>
+      </div>
+      <img src="data/profile.jpg" alt="Zhoufutu Wen" class="profile-img">
+    </div>
+
+    <!-- Biography -->
+    <div class="section" id="biography">
+      <h2><i class="fas fa-user"></i> Biography</h2>
+      <p class="bio-text">
+        I am an Algorithm Researcher at <a href="https://seed.bytedance.com/" target="_blank">ByteDance SEED</a>,
+        leading the Foundation-Evaluation team. I build automated evaluation systems across pre-training and post-training stages of LLMs,
+        with a focus on expert-level capability assessment, model behavior analysis, and multimodal understanding.
+      </p>
+
+      <div class="bio-grid">
+        <div class="bio-card">
+          <h4>Research Interests</h4>
+          <div class="interest-item"><i class="fas fa-chart-line"></i> LLM Evaluation & Benchmarking</div>
+          <div class="interest-item"><i class="fas fa-brain"></i> Expert-level Capability Assessment</div>
+          <div class="interest-item"><i class="fas fa-microscope"></i> Model Behavior Analysis</div>
+          <div class="interest-item"><i class="fas fa-layer-group"></i> Multimodal Understanding</div>
+        </div>
+        <div class="bio-card">
+          <h4>Contact</h4>
+          <div class="contact-links">
+            <button onclick="copyEmail()" class="contact-btn" id="email-btn">
+              <i class="fas fa-envelope"></i> Email
+            </button>
+            <a href="https://scholar.google.com/citations?user=watnbFwAAAAJ&hl=en" target="_blank" class="contact-btn">
+              <i class="fas fa-graduation-cap"></i> Google Scholar
+            </a>
+            <a href="https://github.com/randomtutu" target="_blank" class="contact-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- News -->
+    <div class="section" id="news">
+      <h2><i class="fas fa-bullhorn"></i> News</h2>
+      <div class="news-list">
+        <div class="visible-news">
+          <div class="news-item">
+            <div class="news-date">2026-02</div>
+            <div class="news-text">
+              <em>"Seed 2.0"</em> officially released, featuring Pro / Lite / Mini / Code variants.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2026-02</div>
+            <div class="news-text">
+              Our paper <em>"WorldTravel: A Realistic Multimodal Travel-Planning Benchmark with Tightly Coupled Constraints"</em> is published on arXiv.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-12</div>
+            <div class="news-text">
+              <em>"Seed1.8 Model Card: Towards Generalized Real-World Agency"</em> is officially released.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-12</div>
+            <div class="news-text">
+              <em>"Introduction to Techniques Used in Seed1.6"</em> technical report is released.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-11</div>
+            <div class="news-text">
+              Our paper <em>"DiscoX: Benchmarking Discourse-Level Translation task in Expert Domains"</em> is published on arXiv.
+            </div>
+          </div>
+        </div>
+        <div class="news-hidden" id="hidden-news">
+          <div class="news-item">
+            <div class="news-date">2025-09</div>
+            <div class="news-text">
+              Our paper <em>"FinSearchComp"</em> is published on arXiv and accepted at <span class="venue">ICLR 2026</span> — retweeted 3 times by Elon Musk with tens of millions of impressions.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-09</div>
+            <div class="news-text">
+              <em>"SuperGPQA"</em> accepted at <span class="venue">NeurIPS 2025</span>;
+              <em>"Quantification of LLM Distillation"</em> accepted at <span class="venue">ACL 2025 Main</span>.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-08</div>
+            <div class="news-text">
+              Our paper <em>"TreePO: Bridging the Gap of Policy Optimization and Inference Efficiency"</em> is published on arXiv.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-06</div>
+            <div class="news-text">
+              Our paper <em>"MARS-Bench"</em> is published on arXiv; later accepted at <span class="venue">EMNLP 2025 Findings</span>.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-04</div>
+            <div class="news-text">
+              <em>"Seed1.5-Thinking: Advancing Superb Reasoning Models with Reinforcement Learning"</em> is published on arXiv.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-02</div>
+            <div class="news-text">
+              <em>"SuperGPQA"</em> and <em>"CryptoX"</em> published on arXiv.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-01</div>
+            <div class="news-text">
+              <em>"Quantification of Large Language Model Distillation"</em> published on arXiv;
+              <em>"KOR-Bench"</em> accepted at <span class="venue">ICLR 2025</span>.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2024-10</div>
+            <div class="news-text">
+              Our paper <em>"KOR-Bench: Benchmarking Language Models on Knowledge-Orthogonal Reasoning Tasks"</em> is published on arXiv.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2023-09</div>
+            <div class="news-text">
+              Joined ByteDance SEED as Algorithm Researcher on the Foundation-Evaluation team.
+            </div>
+          </div>
+        </div>
+        <button class="news-toggle" onclick="toggleNews()">
+          <span id="news-toggle-text">Show more</span> <i class="fas fa-chevron-down" id="news-toggle-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Publications -->
+    <div class="section" id="publications">
+      <h2><i class="fas fa-book"></i> Selected Publications</h2>
+      <p class="pub-note">
+        <span style="color:#dc2626; font-weight:700;">*</span> equal contribution &nbsp;
+        <span style="color:#dc2626; font-weight:700;">&dagger;</span> corresponding author
+      </p>
+
+      <!-- Seed 2.0 (2026-02-14) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://seed.bytedance.com/en/seed2" target="_blank">Seed 2.0: Pro / Lite / Mini / Code</a>
+        </div>
+        <div class="pub-authors">
+          ByteDance Seed Team <span class="contribution">(Core Contributor: Evaluation & Model Analysis System)</span>
+        </div>
+        <p class="pub-highlight">Introduces <em>Model-in-Model</em> evaluation paradigm: leveraging LLM agents to automatically analyze model capabilities, identify behavioral patterns, and generate structured evaluation reports — enabling scalable, human-out-of-the-loop diagnostics.</p>
+        <div class="pub-meta">
+          <span class="pub-venue tech-report">Tech Report 2026</span>
+          <a href="https://seed.bytedance.com/en/seed2" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Homepage</a>
+        </div>
+      </div>
+
+      <!-- WorldTravel (2026-02) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2602.08367" target="_blank">WorldTravel: A Realistic Multimodal Travel-Planning Benchmark with Tightly Coupled Constraints</a>
+        </div>
+        <div class="pub-authors">
+          Z. Wang, C. Yang, Y. Que, Z. Yang, H. Yuan, Y. Wang, Z. Jiang, S. Fang, Z. Wu, Z. Wang, Z. Yao,
+          J. Liu, J. Ren, Y. Li, Y. Yang, J. Liu, J. Yang, Z. Wang, G. Zhang,
+          <span class="me">Zhoufutu Wen<span class="corresponding">&dagger;</span></span>, W. Huang
+        </div>
+        <p class="pub-highlight">As LLM capability boundaries expand, we examine models' <em>operations-research</em> abilities in everyday life — testing whether they can handle tightly coupled constraints that mirror real-world travel planning.</p>
+        <div class="pub-meta">
+          <span class="pub-venue arxiv">arXiv 2026</span>
+          <a href="https://arxiv.org/abs/2602.08367" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
+        </div>
+      </div>
+
+      <!-- Seed1.8 (2025-12) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://github.com/ByteDance-Seed/Seed-1.8" target="_blank">Seed1.8 Model Card: Towards Generalized Real-World Agency</a>
+        </div>
+        <div class="pub-authors">
+          ByteDance Seed Team <span class="contribution">(Core Contributor: Evaluation System)</span>
+        </div>
+        <p class="pub-highlight">Features a comprehensive <em>Evaluation System</em> covering foundational LLM, multimodal VLM, and agentic capabilities — combining public benchmarks with internal assessments aligned to high-value application patterns (e.g., FinSearchComp, WorldTravel, GUI Agent).</p>
+        <div class="pub-meta">
+          <span class="pub-venue tech-report">Tech Report 2025</span>
+          <a href="https://seed.bytedance.com/en/blog/official-release-of-seed1-8-a-generalized-agentic-model" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Blog</a>
+          <a href="https://github.com/ByteDance-Seed/Seed-1.8" target="_blank" class="pub-link"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+
+      <!-- Seed1.6 (2025-12) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://seed.bytedance.com/en/blog/introduction-to-techniques-used-in-seed1-6" target="_blank">Introduction to Techniques Used in Seed1.6</a>
+        </div>
+        <div class="pub-authors">
+          ByteDance Seed Team
+        </div>
+        <p class="pub-highlight">Introduces <em>Adaptive Chain-of-Thought (AdaCoT)</em> and sparse MoE architecture (230B total / 23B active) with 256K context — dynamically allocating reasoning depth based on query complexity.</p>
+        <div class="pub-meta">
+          <span class="pub-venue tech-report">Tech Report 2025</span>
+          <a href="https://seed.bytedance.com/en/blog/introduction-to-techniques-used-in-seed1-6" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Blog</a>
+        </div>
+      </div>
+
+      <!-- DiscoX (2025-11) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2511.10984" target="_blank">DiscoX: Benchmarking Discourse-Level Translation task in Expert Domains</a>
+        </div>
+        <div class="pub-authors">
+          X. Zhao, <span class="me">Zhoufutu Wen<span class="corresponding">&dagger;</span></span>, Z. Chen, J. Ding, J. Jiao, S. Li, X. Li, D. Liang, S. Long, Q. Liu, X. Wu, et al.
+        </div>
+        <p class="pub-highlight">Targets the classic task of translation, revealing that even the most advanced LLMs still fall significantly short of human experts at <em>discourse-level</em> translation in professional domains — a long road ahead.</p>
+        <div class="pub-meta">
+          <span class="pub-venue arxiv">arXiv 2025</span>
+          <a href="https://arxiv.org/abs/2511.10984" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
+          <a href="https://randomtutu.github.io/DiscoX/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+          <a href="https://www.nature.com/articles/d41586-026-00229-0" target="_blank" class="pub-link media"><i class="fas fa-newspaper"></i> Nature</a>
+          <a href="https://mp.weixin.qq.com/s/VRirtuVGmlrRev6pKEB-MQ" target="_blank" class="pub-link media"><i class="fab fa-weixin"></i> Z Potentials</a>
+        </div>
+      </div>
+
+      <!-- FinSearchComp (2025-09) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2509.13160" target="_blank">FinSearchComp: Towards a Realistic, Expert-Level Evaluation of Financial Search and Reasoning</a>
+        </div>
+        <div class="pub-authors">
+          L. Hu, J. Jiao, J. Liu, Y. Ren, <span class="me">Zhoufutu Wen<span class="corresponding">&dagger;</span></span>, K. Zhang, X. Zhang, X. Gao, T. He, F. Hu, Y. Liao, Z. Wang, C. Yang, Q. Yang, et al.
+        </div>
+        <p class="pub-highlight">Evaluates models' ability to complete <em>real-world financial analyst workflows</em> through 635 expert-crafted questions spanning global and Greater China markets — widely adopted as a standard capability assessment by leading foundation model teams.</p>
+        <div class="pub-meta">
+          <span class="pub-venue">ICLR 2026</span>
+          <a href="https://arxiv.org/abs/2509.13160" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
+          <a href="https://github.com/randomtutu/FinSearchComp" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+          <a href="https://randomtutu.github.io/FinSearchComp/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+          <a href="https://mp.weixin.qq.com/s/08GCdomcJulDHqswLW-66Q" target="_blank" class="pub-link media"><i class="fab fa-weixin"></i> 量子位</a>
+        </div>
+      </div>
+
+      <!-- TreePO (2025-08) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2508.17445" target="_blank">TreePO: Bridging the Gap of Policy Optimization and Inference Efficiency with Heuristic Tree-based Modeling</a>
+        </div>
+        <div class="pub-authors">
+          Y. Li<span class="equal">*</span>, Q. Gu<span class="equal">*</span>, <span class="me">Zhoufutu Wen<span class="equal">*</span></span>, Z. Li, T. Xing, S. Guo, T. Zheng, X. Zhou, X. Qu, W. Zhou, et al.
+        </div>
+        <p class="pub-highlight">Explores <em>rollout efficiency in RL</em> — investigating how to scale reinforcement learning for LLMs by bridging the gap between policy optimization quality and inference-time compute.</p>
+        <div class="pub-meta">
+          <span class="pub-venue arxiv">arXiv 2025</span>
+          <a href="https://arxiv.org/abs/2508.17445" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
+        </div>
+      </div>
+
+      <!-- MARS-Bench (2025-06) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2505.23810" target="_blank">MARS-Bench: A Multi-turn Athletic Real-world Scenario Benchmark for Dialogue Evaluation</a>
+        </div>
+        <div class="pub-authors">
+          C. Yang<span class="equal">*</span>, Y. Luo<span class="equal">*</span>,
+          <span class="me">Zhoufutu Wen<span class="corresponding">&dagger;</span></span>,
+          Q. Chu<span class="corresponding">&dagger;</span>,
+          T. Gong, L. Liu, K. Zhang, J. Jiao, G. Zhang, W. Huang, N. Yu
+        </div>
+        <p class="pub-highlight">A closed-loop experiment: <em>discovering problems from practice, distilling them into a benchmark, and using the benchmark to guide model iteration</em> — focusing on multi-turn dialogue robustness under motivation transfer and cross-turn dependency.</p>
+        <div class="pub-meta">
+          <span class="pub-venue">EMNLP 2025 Findings</span>
+          <a href="https://arxiv.org/abs/2505.23810" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
+          <a href="https://github.com/Syuchin/MARS-Bench" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+          <a href="https://syuchin.github.io/MARS-Bench/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+        </div>
+      </div>
+
+      <!-- Seed1.5-Thinking (2025-04) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2504.13914" target="_blank">Seed1.5-Thinking: Advancing Superb Reasoning Models with Reinforcement Learning</a>
+        </div>
+        <div class="pub-authors">
+          ByteDance Seed Team
+        </div>
+        <p class="pub-highlight">ByteDance's first reasoning-focused model — achieves 86.7 on AIME 2024 and 55.0 on Codeforces via <em>reinforcement learning</em>, with a compact MoE design (20B active / 200B total).</p>
+        <div class="pub-meta">
+          <span class="pub-venue arxiv">arXiv 2025</span>
+          <a href="https://arxiv.org/abs/2504.13914" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
+        </div>
+      </div>
+
+      <!-- SuperGPQA (2025-02) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2502.14739" target="_blank">SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines</a>
+        </div>
+        <div class="pub-authors">
+          X. Du, Y. Yao, K. Ma, B. Wang, T. Zheng, K. Zhu, M. Liu, Y. Liang, X. Jin, Z. Wei, <span class="me">Zhoufutu Wen</span>, et al.
+        </div>
+        <p class="pub-highlight">The largest <em>expert-level</em> knowledge benchmark to date — spanning 285 graduate disciplines with 80+ expert annotators and a Human-LLM collaborative filtering mechanism, revealing that even the best models only reach ~62% accuracy.</p>
+        <div class="pub-meta">
+          <span class="pub-venue">NeurIPS 2025</span>
+          <a href="https://arxiv.org/abs/2502.14739" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
+          <a href="https://github.com/SuperGPQA/SuperGPQA" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div>
+
+      <!-- CryptoX (2025-02) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2502.07813" target="_blank">CryptoX: Compositional Reasoning Evaluation of Large Language Models</a>
+        </div>
+        <div class="pub-authors">
+          J. Shi<span class="equal">*</span>, C. Wei<span class="equal">*</span>, L. Yang<span class="equal">*</span>,
+          Z.M. Wang, C. Yang, G. Zhang, S. Huang, T. Peng,
+          J. Yang<span class="corresponding">&dagger;</span>,
+          <span class="me">Zhoufutu Wen<span class="corresponding">&dagger;</span></span>
+        </div>
+        <p class="pub-highlight">Uncovers the gap between <em>fluid intelligence</em> (novel reasoning) and <em>crystallized intelligence</em> (memorized knowledge) in LLMs through cryptographic compositional tasks, with mechanistic interpretability experiments explaining why.</p>
+        <div class="pub-meta">
+          <span class="pub-venue arxiv">arXiv 2025</span>
+          <a href="https://arxiv.org/abs/2502.07813" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
+          <a href="https://github.com/multimodal-art-projection/CryptoX" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+          <a href="https://razor233.github.io/CryptoX/" target="_blank" class="pub-link"><i class="fas fa-trophy"></i> Leaderboard</a>
+        </div>
+      </div>
+
+      <!-- Quantification of LLM Distillation (2025-01) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2501.12619" target="_blank">Quantification of Large Language Model Distillation</a>
+        </div>
+        <div class="pub-authors">
+          S. Lee, J. Zhou, C. Ao, K. Li, X. Du, S. He, H. Wu, T. Liu, J. Liu, <span class="me">Zhoufutu Wen<span class="corresponding">&dagger;</span></span>, et al.
+        </div>
+        <p class="pub-highlight">A <em>pioneering work</em> that opens up the study of LLM distillation quantification — proposing the first systematic framework to measure distillation degree across models, revealing widespread model homogenization in the field.</p>
+        <div class="pub-meta">
+          <span class="pub-venue">ACL 2025 Main</span>
+          <a href="https://arxiv.org/abs/2501.12619" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
+          <a href="https://aclanthology.org/2025.acl-long.248/" target="_blank" class="pub-link"><i class="fas fa-book-open"></i> ACL Anthology</a>
+          <a href="https://mp.weixin.qq.com/s/gbUdZOknQ910o9dn3W9VfA" target="_blank" class="pub-link media"><i class="fab fa-weixin"></i> 机器学习社区</a>
+        </div>
+      </div>
+
+      <!-- KOR-Bench (2024-10) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2410.06526" target="_blank">KOR-Bench: Benchmarking Language Models on Knowledge-Orthogonal Reasoning Tasks</a>
+        </div>
+        <div class="pub-authors">
+          K. Ma, X. Du, Y. Wang, H. Zhang, <span class="me">Zhoufutu Wen</span>, X. Qu, J. Yang, J. Liu, M. Liu, X. Yue, et al.
+        </div>
+        <p class="pub-highlight">Isolates <em>pure reasoning ability</em> from memorized knowledge by designing knowledge-orthogonal rules — revealing that LLMs struggle significantly with out-of-distribution reasoning independent of pretrained knowledge.</p>
+        <div class="pub-meta">
+          <span class="pub-venue">ICLR 2025</span>
+          <a href="https://arxiv.org/abs/2410.06526" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
+          <a href="https://kor-bench.github.io/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section" id="experience">
+      <h2><i class="fas fa-briefcase"></i> Experience</h2>
+
+      <div class="exp-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a0/ByteDance_logo_English.svg"
+             alt="ByteDance" class="exp-logo"
+             onerror="this.style.display='none'">
+        <div class="exp-info">
+          <h3>ByteDance SEED</h3>
+          <div class="exp-role">Algorithm Researcher · Foundation-Evaluation</div>
+          <div class="exp-date">Sep 2023 – Present · Beijing, China</div>
+          <div class="exp-desc">
+            Led the construction and development of the SEED evaluation system covering pre-training and post-training stages.
+            Focus areas include expert-level capability assessment, evaluation data production, and model behavior analysis.
+            Open-sourced benchmarks such as SuperGPQA, KOR-Bench, FinSearchComp, DiscoX, and more.
+          </div>
+          <div class="exp-highlights">
+            <span class="exp-tag">LLM Evaluation</span>
+            <span class="exp-tag">Benchmark Design</span>
+            <span class="exp-tag">Model Analysis</span>
+            <span class="exp-tag">Expert-level Assessment</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/2b/Baidu_logo_%282019%29.png"
+             alt="Baidu" class="exp-logo"
+             onerror="this.style.display='none'">
+        <div class="exp-info">
+          <h3>Baidu · Ecom</h3>
+          <div class="exp-role">Algorithm Engineer</div>
+          <div class="exp-date">Jul 2020 – Sep 2023 · Beijing, China</div>
+          <div class="exp-desc">
+            Built multimodal content understanding solutions for commercial monetization.
+            Trained and optimized VLP models (200M–10B params) applied across ad trigger, ranking, creative generation, and user experience.
+            Completed 30+ A/B tests over 3 years.
+          </div>
+          <div class="exp-highlights">
+            <span class="exp-tag">Multimodal Models</span>
+            <span class="exp-tag">VLP</span>
+            <span class="exp-tag">Ad Systems</span>
+            <span class="exp-tag">Baidu Highest Award Nominee ×2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section" id="education">
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+
+      <div class="edu-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/50/UESTC_logo.png"
+             alt="UESTC" class="edu-logo"
+             onerror="this.style.display='none'">
+        <div class="edu-info">
+          <h3>University of Electronic Science and Technology of China (UESTC)</h3>
+          <div class="edu-degree">M.S. in Computer Science · School of Computer Science</div>
+          <div class="edu-date">Aug 2017 – Jun 2020</div>
+          <div class="edu-note">Top 10%</div>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/50/UESTC_logo.png"
+             alt="UESTC" class="edu-logo"
+             onerror="this.style.display='none'">
+        <div class="edu-info">
+          <h3>University of Electronic Science and Technology of China (UESTC)</h3>
+          <div class="edu-degree">B.E. in Electronic Engineering · School of Physics</div>
+          <div class="edu-date">Aug 2013 – Jun 2017</div>
+          <div class="edu-note">Top 5% · National Scholarship</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2026 Zhoufutu Wen. Powered by GitHub Pages.
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    function toggleNews() {
+      const hidden = document.getElementById('hidden-news');
+      const text = document.getElementById('news-toggle-text');
+      const icon = document.getElementById('news-toggle-icon');
+      hidden.classList.toggle('expanded');
+      if (hidden.classList.contains('expanded')) {
+        text.textContent = 'Show less';
+        icon.className = 'fas fa-chevron-up';
+      } else {
+        text.textContent = 'Show more';
+        icon.className = 'fas fa-chevron-down';
+      }
+    }
+
+    function copyEmail() {
+      const email = 'wzft123@outlook.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const btn = document.getElementById('email-btn');
+        const original = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        setTimeout(() => { btn.innerHTML = original; }, 2000);
+      });
+    }
+
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+      document.querySelector('.hamburger').classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.querySelector('.nav-links').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('active');
+    }
+  </script>
+</body>
+</html>

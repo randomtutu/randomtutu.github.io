@@ -258,20 +258,19 @@ a:hover {
   letter-spacing: 0.05em;
 }
 
-.interest-item {
+.interest-tags {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
-  padding: 5px 0;
-  font-size: 0.9rem;
-  color: var(--text);
 }
 
-.interest-item i {
-  color: var(--accent);
+.interest-tag {
   font-size: 0.8rem;
-  width: 16px;
-  text-align: center;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: var(--accent-light);
+  color: var(--accent);
 }
 
 .contact-links {
@@ -371,36 +370,93 @@ a:hover {
   color: var(--primary);
 }
 
-.news-toggle {
-  background: none;
-  border: none;
-  color: var(--accent);
-  font-size: 0.85rem;
-  font-weight: 500;
+/* ── Collapsible Sections ── */
+.section-collapsible h2 {
   cursor: pointer;
-  padding: 4px 0;
-  margin-left: 20px;
-  margin-top: 4px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  transition: color 0.2s;
+  user-select: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
-.news-toggle:hover {
-  color: var(--primary);
+.section-collapsible .section-toggle {
+  margin-left: auto;
+  font-size: 0.85rem;
+  transition: transform 0.3s;
 }
 
-.news-hidden {
+.section-collapsible.expanded .section-toggle {
+  transform: rotate(180deg);
+}
+
+.section-collapsible.expanded h2 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent-light);
+}
+
+.section-content {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.4s ease;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
-.news-hidden.expanded {
-  max-height: 2000px;
+.section-collapsible.expanded .section-content {
+  max-height: 5000px;
   opacity: 1;
+}
+
+/* ── Research ── */
+.research-list {
+  list-style: none;
+  counter-reset: research-counter;
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+.research-item {
+  counter-increment: research-counter;
+  position: relative;
+  padding: 14px 0 14px 36px;
+  border-bottom: 1px solid var(--border);
+}
+
+.research-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.research-item::before {
+  content: counter(research-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.research-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.research-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.research-desc a {
+  font-weight: 500;
+}
+
+.research-desc .venue {
+  font-weight: 600;
+  color: var(--primary);
 }
 
 /* ── Publications ── */

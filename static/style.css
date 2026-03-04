@@ -617,6 +617,18 @@ a:hover {
   color: #78350f;
 }
 
+.pub-link.xpert {
+  background: #ede9fe;
+  border-color: #8b5cf6;
+  color: #5b21b6;
+}
+
+.pub-link.xpert:hover {
+  background: #ddd6fe;
+  border-color: #7c3aed;
+  color: #4c1d95;
+}
+
 .pub-authors .contribution {
   font-size: 0.82rem;
   font-weight: 500;

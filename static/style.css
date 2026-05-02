@@ -178,6 +178,14 @@ a:hover {
 
 .hero-text .quote.maxwell .katex { font-size: 0.85em; }
 
+.hero-text .quote-caption {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
 .profile-img {
   width: 160px;
   height: 160px;

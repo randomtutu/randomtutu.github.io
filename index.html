@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-  <link rel="stylesheet" href="static/style.css?v=20260303c">
+  <link rel="stylesheet" href="static/style.css?v=20260502a">
 </head>
 
 <body>
@@ -39,6 +39,7 @@
         <p class="subtitle">Algorithm Researcher @ ByteDance SEED · Foundation-Evaluation</p>
         <div class="quote maxwell">
           $$\nabla \cdot \mathbf{E}=\frac{\rho}{\varepsilon_0} \qquad \nabla \cdot \mathbf{B}=0 \qquad \nabla \times \mathbf{E}=-\frac{\partial \mathbf{B}}{\partial t} \qquad \nabla \times \mathbf{B}=\mu_0 \mathbf{J}+\mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}$$
+          <div class="quote-caption">Maxwell unified electricity, magnetism, and light into four lines. I try to bring the same kind of structure to LLM evaluation.</div>
         </div>
       </div>
       <img src="data/profile.jpg" alt="Zhoufutu Wen" class="profile-img">
@@ -51,6 +52,15 @@
         I am an Algorithm Researcher at <a href="https://seed.bytedance.com/" target="_blank">ByteDance SEED</a>,
         working on the Foundation-Evaluation team. I build automated evaluation systems across pre-training and post-training stages of LLMs,
         with a focus on expert-level capability assessment, model behavior analysis, and multimodal understanding.
+        My work has contributed to the Seed 1.6 / 1.8 / 2.0 releases, and the benchmarks I co-led
+        (SuperGPQA, FinSearchComp, DiscoX, XpertBench) have appeared at NeurIPS / ICLR / ACL,
+        been <a href="https://www.nature.com/articles/d41586-026-00229-0" target="_blank">cited by <em>Nature</em></a>,
+        and adopted as standard agentic tests by leading foundation-model teams including
+        <a href="https://huggingface.co/MiniMaxAI/MiniMax-M2" target="_blank">MiniMax-M2</a> and
+        <a href="https://arxiv.org/abs/2602.02276" target="_blank">Moonshot Kimi K2.5</a> —
+        with <em>FinSearchComp</em> also
+        <a href="https://x.com/elonmusk/status/1968847140752388413" target="_blank">quote-tweeted by Elon Musk</a>,
+        reaching tens of millions of impressions.
       </p>
 
       <div class="bio-grid">
@@ -83,6 +93,9 @@
     <!-- Research -->
     <div class="section" id="research">
       <h2><i class="fas fa-flask"></i> Research</h2>
+      <p class="bio-text research-thesis">
+        <strong>My thesis: Evals are the new PRD</strong> — <em>what we measure is what we build.</em>
+      </p>
       <p class="bio-text">
         As LLMs' capability boundaries expand while compute and human resources remain limited,
         evaluation must answer two fundamental questions:
@@ -101,8 +114,9 @@
             decomposing evaluable units from industry workflows covering search, tool use, and multi-stage decision-making.
             Representative works include
             <a href="https://arxiv.org/abs/2509.13160" target="_blank">FinSearchComp</a> (<span class="venue">ICLR 2026</span>),
+            <a href="https://arxiv.org/abs/2604.02368" target="_blank">XpertBench</a>,
             <a href="https://arxiv.org/abs/2511.10984" target="_blank">DiscoX</a> (<a href="https://www.nature.com/articles/d41586-026-00229-0" target="_blank">cited by Nature</a>), and
-            <a href="https://arxiv.org/abs/2602.08367" target="_blank">WorldTravel</a>.
+            <a href="https://arxiv.org/abs/2602.08367" target="_blank">WorldTravel</a> (<span class="venue">ICML 2026</span>).
           </div>
         </li>
         <li class="research-item">
@@ -122,7 +136,8 @@
             Go beyond scores to analyze model capability patterns and behavioral signals — competitor analysis, internal iteration analysis,
             base vs. instruct comparisons — turning evaluation into actionable diagnostic insights.
             Representative works include
-            <a href="https://arxiv.org/abs/2501.12619" target="_blank">Quantification of LLM Distillation</a> (<span class="venue">ACL 2025 Main</span>) and
+            <a href="https://arxiv.org/abs/2501.12619" target="_blank">Quantification of LLM Distillation</a> (<span class="venue">ACL 2025 Main</span>),
+            <a href="https://arxiv.org/abs/2604.21255" target="_blank">When Agents Look the Same</a> (<span class="venue">ACL 2026</span>), and
             <a href="https://arxiv.org/abs/2502.07813" target="_blank">CryptoX</a>.
           </div>
         </li>
@@ -131,7 +146,7 @@
           <div class="research-desc">
             Verify analysis hypotheses through controlled experiments and sanity checks, then scale validated insights across teams.
             We design
-            <a href="https://arxiv.org/abs/2508.17445" target="_blank">TreePO</a> to bridge the gap between policy optimization quality and inference-time compute in LLM reinforcement learning.
+            <a href="https://arxiv.org/abs/2508.17445" target="_blank">TreePO</a> (<span class="venue">ICML 2026</span>) to bridge the gap between policy optimization quality and inference-time compute in LLM reinforcement learning.
           </div>
         </li>
       </ol>
@@ -145,6 +160,24 @@
       </h2>
       <div class="section-content" id="news-content">
         <div class="news-list">
+          <div class="news-item">
+            <div class="news-date">2026-05</div>
+            <div class="news-text">
+              <em>"WorldTravel"</em> and <em>"TreePO"</em> accepted at <span class="venue">ICML 2026</span>.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2026-04</div>
+            <div class="news-text">
+              Our paper <em>"XpertBench: Expert Level Tasks with Rubrics-Based Evaluation"</em> is published on arXiv — a 1,346-task expert benchmark built with 1,000+ domain experts.
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2026-04</div>
+            <div class="news-text">
+              Our paper <em>"When Agents Look the Same: Quantifying Distillation-Induced Similarity in Tool-Use Behaviors"</em> accepted at <span class="venue">ACL 2026</span>.
+            </div>
+          </div>
           <div class="news-item">
             <div class="news-date">2026-02</div>
             <div class="news-text">
@@ -176,9 +209,15 @@
             </div>
           </div>
           <div class="news-item">
+            <div class="news-date">2025-10</div>
+            <div class="news-text">
+              <em>"FinSearchComp"</em> adopted as a core benchmark in the <a href="https://huggingface.co/MiniMaxAI/MiniMax-M2" target="_blank">MiniMax-M2 model card</a> — listed alongside SWE-bench, Terminal-Bench, BrowseComp and τ²-Bench.
+            </div>
+          </div>
+          <div class="news-item">
             <div class="news-date">2025-09</div>
             <div class="news-text">
-              Our paper <em>"FinSearchComp"</em> is published on arXiv and accepted at <span class="venue">ICLR 2026</span> — retweeted 3 times by Elon Musk with tens of millions of impressions.
+              Our paper <em>"FinSearchComp"</em> is published on arXiv and accepted at <span class="venue">ICLR 2026</span> — <em>Grok 4</em> tops the global leaderboard at 68.9%, retweeted 3 times by Elon Musk with tens of millions of impressions.
             </div>
           </div>
           <div class="news-item">
@@ -243,6 +282,45 @@
         <span style="color:#dc2626; font-weight:700;">&dagger;</span> corresponding author
       </p>
 
+      <!-- XpertBench (2026-04) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2604.02368" target="_blank">XpertBench: Expert Level Tasks with Rubrics-Based Evaluation</a>
+        </div>
+        <div class="pub-authors">
+          X. Liu, X. Ma, Y. Ma, Y. Peng,
+          D. Wang<span class="corresponding">&dagger;</span>,
+          <span class="me">Zhoufutu Wen</span>,
+          G. Zhang<span class="corresponding">&dagger;</span>,
+          K. Zhang <span class="contribution">(Core Contributors, α–β order)</span>
+        </div>
+        <p class="pub-highlight">A high-fidelity benchmark of <em>1,346 expert-curated tasks</em> across 7 professional domains, evaluated with 15–40 weighted rubric checkpoints per task and our <em>ShotJudge</em> paradigm — exposing a pronounced "expert-gap" where even frontier models peak at only ~66% success.</p>
+        <div class="pub-meta">
+          <span class="pub-venue arxiv">arXiv 2026</span>
+          <a href="https://arxiv.org/abs/2604.02368" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
+          <a href="https://xpert.bytedance.com/" target="_blank" class="pub-link xpert"><i class="fas fa-ranking-star"></i> Xpert</a>
+        </div>
+      </div>
+
+      <!-- When Agents Look the Same (2026-04) -->
+      <div class="pub-card">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2604.21255" target="_blank">When Agents Look the Same: Quantifying Distillation-Induced Similarity in Tool-Use Behaviors</a>
+        </div>
+        <div class="pub-authors">
+          C. Yang, Y. Zhang,
+          <span class="me">Zhoufutu Wen<span class="corresponding">&dagger;</span></span>,
+          T. Gong<span class="corresponding">&dagger;</span>,
+          J. Liu, Q. Chu, N. Yu
+        </div>
+        <p class="pub-highlight">Extends our distillation-quantification line from knowledge to <em>agentic tool-use behaviors</em> — introducing <em>Response Pattern Similarity</em> (RPS) and <em>Action Graph Similarity</em> (AGS) to reveal structural homogenization among 18 models across 8 providers on τ-Bench / τ²-Bench.</p>
+        <div class="pub-meta">
+          <span class="pub-venue">ACL 2026</span>
+          <a href="https://arxiv.org/abs/2604.21255" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
+          <a href="https://github.com/Syuchin/AgentEcho" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div>
+
       <!-- Seed 2.0 (2026-02-14) -->
       <div class="pub-card">
         <div class="pub-title">
@@ -270,7 +348,7 @@
         </div>
         <p class="pub-highlight">As LLM capability boundaries expand, we examine models' <em>operations-research</em> abilities in everyday life — testing whether they can handle tightly coupled constraints that mirror real-world travel planning.</p>
         <div class="pub-meta">
-          <span class="pub-venue arxiv">arXiv 2026</span>
+          <span class="pub-venue">ICML 2026</span>
           <a href="https://arxiv.org/abs/2602.08367" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
         </div>
       </div>
@@ -333,7 +411,7 @@
         <div class="pub-authors">
           L. Hu, J. Jiao, J. Liu, Y. Ren, <span class="me">Zhoufutu Wen<span class="corresponding">&dagger;</span></span>, K. Zhang, X. Zhang, X. Gao, T. He, F. Hu, Y. Liao, Z. Wang, C. Yang, Q. Yang, et al.
         </div>
-        <p class="pub-highlight">Evaluates models' ability to complete <em>real-world financial analyst workflows</em> through 635 expert-crafted questions spanning global and Greater China markets — widely adopted as a standard capability assessment by leading foundation model teams.</p>
+        <p class="pub-highlight">Evaluates models' ability to complete <em>real-world financial analyst workflows</em> through 635 expert-crafted questions spanning global and Greater China markets — adopted by leading foundation-model teams as a standard capability test, e.g., a core agentic benchmark in the <a href="https://huggingface.co/MiniMaxAI/MiniMax-M2" target="_blank">MiniMax-M2 model card</a> and one of six core agentic benchmarks in the <a href="https://arxiv.org/abs/2602.02276" target="_blank">Moonshot Kimi K2.5 tech report</a>; <em>Grok 4</em> tops the global leaderboard at <strong>68.9%</strong> (vs. 75% human-expert), and the result was <a href="https://x.com/elonmusk/status/1968847140752388413" target="_blank">quote-tweeted by Elon Musk</a>, reaching tens of millions of impressions.</p>
         <div class="pub-meta">
           <span class="pub-venue">ICLR 2026</span>
           <a href="https://arxiv.org/abs/2509.13160" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
@@ -355,8 +433,9 @@
         </div>
         <p class="pub-highlight">Explores <em>rollout efficiency in RL</em> — investigating how to scale reinforcement learning for LLMs by bridging the gap between policy optimization quality and inference-time compute.</p>
         <div class="pub-meta">
-          <span class="pub-venue arxiv">arXiv 2025</span>
+          <span class="pub-venue">ICML 2026</span>
           <a href="https://arxiv.org/abs/2508.17445" target="_blank" class="pub-link"><i class="fa-regular fa-file-lines"></i> Paper</a>
+          <a href="https://m-a-p.ai/TreePO" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
         </div>
       </div>
 
@@ -480,7 +559,7 @@
           <div class="exp-desc">
             Led the construction and development of the SEED evaluation system covering pre-training and post-training stages.
             Focus areas include expert-level capability assessment, evaluation data production, and model behavior analysis.
-            Open-sourced benchmarks such as SuperGPQA, KOR-Bench, FinSearchComp, DiscoX, and more.
+            Open-sourced benchmarks such as SuperGPQA, KOR-Bench, FinSearchComp, DiscoX, XpertBench, and more.
           </div>
           <div class="exp-highlights">
             <span class="exp-tag">LLM Evaluation</span>
